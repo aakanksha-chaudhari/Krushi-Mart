@@ -1,0 +1,114 @@
+1. FRONTEND (User Side)
+Tech Used:
+HTML, CSS, JavaScript (Vanilla or optionally React.js later)
+
+Pages to Build:
+
+Home Page (with latest motor products and offers)
+
+Product Catalog (with filters: brand, price, power)
+
+Product Detail Page (Add to Cart, Description)
+
+Cart Page
+
+Checkout Page (User enters address, confirms)
+
+Order History / My Orders (for logged-in user)
+
+Admin Dashboard UI (product upload, order view)
+
+✅ 2. BACKEND (Java)
+Tech Stack Options:
+
+Option A (Traditional):
+
+Java + JSP + Servlets + JDBC
+
+Option B (Modern Recommended):
+
+Java + Spring Boot (MVC, JPA, REST APIs)
+
+Features to Build:
+
+REST APIs: Product APIs, Order APIs, User Auth APIs
+
+Admin APIs: Add/Edit/Delete product
+
+Payment Simulation (you can simulate or integrate Razorpay later)
+
+User Login/Signup (use session-based or JWT)
+
+Order Confirmation & History APIs
+
+✅ 3. DATABASE
+MySQL
+Use for:
+
+Users Table (user_id, name, email, password)
+
+Orders Table (order_id, user_id, total_price, status)
+
+Order_Items Table (order_id, product_id, quantity)
+
+MongoDB
+Use for:
+
+Product Catalog (flexible for motor specs, images, category)
+
+json
+Copy
+Edit
+{
+  "_id": "motor01",
+  "name": "Crompton Water Pump 1HP",
+  "brand": "Crompton",
+  "power": "1HP",
+  "price": 4500,
+  "description": "...",
+  "images": ["img1.jpg", "img2.jpg"],
+  "tags": ["energy-efficient", "home-use"]
+}
+✅ 4. AI RECOMMENDATIONS (Later Phase)
+Once your core app is working:
+
+Use purchase history + product attributes + user behavior
+
+Write a simple recommendation algorithm in Python or Java
+
+Example:
+
+Recommend “related products” based on motor power, usage type
+
+Use collaborative filtering or content-based filtering
+
+Store recommendations in MongoDB or generate dynamically
+
+✅ 5. Optional Tools to Consider
+Purpose	Tool Suggestion
+Hosting Frontend	Netlify / Vercel
+Hosting Backend	Render / Railway / VPS
+DB Hosting	PlanetScale (MySQL), MongoDB Atlas
+Code Versioning	Git + GitHub
+UI Framework	Bootstrap or Tailwind CSS
+Testing	Postman (API), JUnit
+
+✅ Folder Structure Suggestion
+pgsql
+Copy
+Edit
+water-motor-app/
+├── frontend/
+│   ├── index.html
+│   ├── product.html
+│   ├── cart.html
+│   └── style.css
+├── backend/
+│   └── src/main/java/com/watermotorapp/
+│       └── controllers, models, services
+│   └── application.properties
+├── database/
+│   ├── schema.sql
+│   └── sample_products.json
+├── ai-recommendation/
+│   └── recommender.py or recommender.java
